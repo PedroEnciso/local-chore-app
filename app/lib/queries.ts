@@ -8,6 +8,7 @@ export async function fetchChores(): Promise<Chore[]> {
     await db.close();
     return chores;
   } catch (error) {
+    console.log(error);
     throw new Error("Failed to fetch chores.");
   }
 }
